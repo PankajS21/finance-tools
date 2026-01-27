@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceTools Blog | Financial Planning Tips & Guides</title>
+    <meta name="description" content="Expert financial advice, investment tips, tax planning guides, and money management strategies from FinanceTools">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <!-- ====== ADD THESE TO EVERY PAGE ====== -->
+
+<!-- Canonical URL (CRITICAL) -->
+<link rel="canonical" href="https://financetools.com/[PAGE-URL]">
+
+<!-- Language & Region -->
+<meta http-equiv="content-language" content="en">
+<meta name="language" content="English">
+<meta name="geo.region" content="IN">
+<meta name="geo.placename" content="India">
+<meta name="geo.position" content="28.6139;77.2090">
+<meta name="ICBM" content="28.6139, 77.2090">
+
+<!-- Publisher -->
+<link rel="publisher" href="https://financetools.com/">
+
+<!-- Author for Blog Posts -->
+<meta name="author" content="FinanceTools Team">
+<meta property="article:author" content="https://financetools.com/about.html">
+
+<!-- Date Published/Modified -->
+<meta property="article:published_time" content="2024-01-25T00:00:00+05:30">
+<meta property="article:modified_time" content="2024-01-25T00:00:00+05:30">
+
+<!-- Content Type -->
+<meta property="og:type" content="website">
+<!-- For blog posts: <meta property="og:type" content="article"> -->
+
+<!-- Mobile Optimization -->
+<meta name="theme-color" content="#2563eb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FinanceTools">
+
+<!-- iOS Meta Tags -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2563eb">
+
+<!-- PWA Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Preload Critical Resources -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+<link rel="preload" href="styles.css" as="style">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+<!-- Structured Data MUST-HAVE for ALL PAGES -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://financetools.com/#website",
+      "url": "https://financetools.com/",
+      "name": "FinanceTools - Free Financial Calculators",
+      "description": "15+ free financial calculators for EMI, SIP, taxes, loans, investments, retirement planning",
+      "potentialAction": [{
+        "@type": "SearchAction",
+        "target": "https://financetools.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }],
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://financetools.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://financetools.com/#organization",
+      "name": "FinanceTools",
+      "url": "https://financetools.com/",
+      "logo": "https://financetools.com/logo.png",
+      "sameAs": [
+        "https://twitter.com/financetools",
+        "https://facebook.com/financetools",
+        "https://linkedin.com/company/financetools"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://financetools.com/[PAGE-URL]#webpage",
+      "url": "https://financetools.com/[PAGE-URL]",
+      "name": "[PAGE TITLE]",
+      "isPartOf": {"@id": "https://financetools.com/#website"},
+      "about": {"@id": "https://financetools.com/#organization"},
+      "description": "[PAGE DESCRIPTION]",
+      "inLanguage": "en-US",
+      "datePublished": "2024-01-25T00:00:00+05:30",
+      "dateModified": "2024-01-25T00:00:00+05:30"
+    }
+  ]
+}
+</script>
+    <style>
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, #e0f2fe 100%);
+            border-radius: 20px;
+        }
+        
+        .blog-header h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .blog-header p {
+            font-size: 1.2rem;
+            color: var(--dark);
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .search-section {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .search-box {
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 18px 50px 18px 20px;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .category-btn {
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--dark);
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .featured-post {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .featured-image {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .featured-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .featured-badge {
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .featured-content h2 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .post-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--gray);
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .post-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .post-image {
+            height: 200px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 3rem;
+        }
+        
+        .post-content {
+            padding: 25px;
+        }
+        
+        .post-category {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .post-content h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .post-excerpt {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .read-more:hover {
+            gap: 12px;
+        }
+        
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .newsletter-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 30px auto 0;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 18px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            background: white;
+            color: var(--dark);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-image {
+                min-height: 200px;
+            }
+            
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-header {
+                padding: 25px;
+            }
+            
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <!-- In your HTML HEAD section - Load these first -->
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXX');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);
+    t.async=1;
+    t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "your-project-id");
+</script>
+
+<!-- Hotjar -->
+<script>
+  (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:1000000,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');
+    r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img style="width: 50px;" src="./images/financialtools-final.webp" alt="">
+                    FinanceTools
+                    <span class="free-badge">FREE</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#calculator-tabs">Calculators</a>
+                    <a href="blog.html" class="active">Blog</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn btn-primary" onclick="location.href='index.html#calculator-tabs'">
+                        <i class="fas fa-bolt"></i> Calculate Free
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Blog</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="blog-container">
+        <!-- Blog Header -->
+        <div class="blog-header">
+            <h1><i class="fas fa-blog"></i> FinanceTools Blog</h1>
+            <p>Expert financial advice, investment tips, tax planning guides, and money management strategies</p>
+            
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" placeholder="Search for financial topics...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            
+            <div class="blog-categories">
+                <button class="category-btn active" data-category="all">All Topics</button>
+                <button class="category-btn" data-category="investment">Investments</button>
+                <button class="category-btn" data-category="loan">Loans</button>
+                <button class="category-btn" data-category="tax">Tax Planning</button>
+                <button class="category-btn" data-category="retirement">Retirement</button>
+                <button class="category-btn" data-category="budgeting">Budgeting</button>
+            </div>
+        </div>
+
+        <!-- Featured Post -->
+        <div class="featured-post">
+            <div class="featured-image">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="featured-content">
+                <span class="featured-badge">FEATURED</span>
+                <h2>How to Save ₹5 Lakhs on Your Home Loan EMI</h2>
+                <p style="color: var(--gray); line-height: 1.6;">
+                    Discover smart strategies to reduce your home loan interest and save lakhs over the loan tenure. Learn about prepayment options, interest rate negotiation, and tenure management.
+                </p>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> January 25, 2024</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                    <span><i class="fas fa-user"></i> Rajesh Kumar</span>
+                </div>
+                <a href="blog/home-loan-saving-tips.html" class="read-more">
+                    Read Full Article <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="posts-grid">
+            <!-- Post 1 -->
+            <div class="post-card" data-category="investment">
+                <div class="post-image" style="background: linear-gradient(135deg, var(--secondary-light) 0%, #d1fae5 100%);">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Investments</span>
+                    <h3>SIP vs Lumpsum: Which is Better for 2024?</h3>
+                    <p class="post-excerpt">
+                        Comparative analysis of SIP and lumpsum investments with historical returns data. Learn which strategy works best in different market conditions.
+                    </p>
+                    <div class="post-meta" style="margin: 15px 0;">
+                        <span><i class="far fa-calendar"></i> Jan 20, 2024</span>
+                        <span><i class="far fa-clock"></i> 7 min read</span>
+                    </div>
+                    <a href="blog/sip-vs-lumpsum.html" class="read-more">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Post 2 -->
+            <div class="post-card" data-category="tax">
+                <div class="post-image" style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <div class="post-content">
+                    <span class="post-category" style="background: #ede9fe; color: #8b5cf6;">Tax Planning</span>
+                    <h3>Complete Guide to Tax Saving Investments 2024</h3>
+                    <p class="post-excerpt">
+                        Explore all Section 80C investment options with returns comparison and risk analysis. Make informed tax-saving decisions for FY 2023-24.
+                    </p>
+                    <div class="post-meta" style="margin: 15px 0;">
+                        <span><i class="far fa-calendar"></i> Jan 18, 2024</span>
+                        <span><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                    <a href="blog/tax-saving-investments.html" class="read-more">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Post 3 -->
+            <div class="post-card" data-category="retirement">
+                <div class="post-image" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <div class="post-content">
+                    <span class="post-category" style="background: #fef3c7; color: #d97706;">Retirement</span>
+                    <h3>How Much Do You Need to Retire Comfortably?</h3>
+                    <p class="post-excerpt">
+                        Calculate your retirement corpus needs with inflation adjustment. Learn about different retirement planning strategies and investment options.
+                    </p>
+                    <div class="post-meta" style="margin: 15px 0;">
+                        <span><i class="far fa-calendar"></i> Jan 15, 2024</span>
+                        <span><i class="far fa-clock"></i> 9 min read</span>
+                    </div>
+                    <a href="blog/retirement-planning.html" class="read-more">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Post 4 -->
+            <div class="post-card" data-category="loan">
+                <div class="post-image" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Loans</span>
+                    <h3>Car Loan vs Personal Loan: Which is Better?</h3>
+                    <p class="post-excerpt">
+                        Compare interest rates, processing fees, and eligibility criteria for car loans and personal loans. Make the right borrowing decision.
+                    </p>
+                    <div class="post-meta" style="margin: 15px 0;">
+                        <span><i class="far fa-calendar"></i> Jan 12, 2024</span>
+                        <span><i class="far fa-clock"></i> 6 min read</span>
+                    </div>
+                    <a href="blog/car-vs-personal-loan.html" class="read-more">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Post 5 -->
+            <div class="post-card" data-category="budgeting">
+                <div class="post-image" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="post-content">
+                    <span class="post-category" style="background: #f0f9ff; color: #0369a1;">Budgeting</span>
+                    <h3>50/30/20 Rule: Simple Budgeting Strategy</h3>
+                    <p class="post-excerpt">
+                        Learn the 50/30/20 budgeting rule and how to implement it. Simple framework to manage your income, expenses, and savings effectively.
+                    </p>
+                    <div class="post-meta" style="margin: 15px 0;">
+                        <span><i class="far fa-calendar"></i> Jan 10, 2024</span>
+                        <span><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                    <a href="blog/budgeting-rule.html" class="read-more">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Post 6 -->
+            <div class="post-card" data-category="investment">
+                <div class="post-image" style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Investments</span>
+                    <h3>PPF vs FD: Which Gives Better Returns?</h3>
+                    <p class="post-excerpt">
+                        Detailed comparison of Public Provident Fund and Fixed Deposits. Understand tax implications, liquidity, and safety of both options.
+                    </p>
+                    <div class="post-meta" style="margin: 15px 0;">
+                        <span><i class="far fa-calendar"></i> Jan 8, 2024</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <a href="blog/ppf-vs-fd.html" class="read-more">
+                        Read Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2><i class="fas fa-envelope"></i> Get Financial Tips Directly</h2>
+            <p>Subscribe to our newsletter for weekly financial insights, calculator updates, and exclusive content</p>
+            
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button class="btn" style="background: white; color: var(--primary); width: 100%; padding: 18px; border-radius: 50px; font-weight: 600;">
+                    <i class="fas fa-paper-plane"></i> Subscribe Now
+                </button>
+                <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 15px;">
+                    No spam. Unsubscribe anytime. Read our <a href="privacy-policy.html" style="color: white; text-decoration: underline;">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-calculator"></i>
+                        FinanceTools
+                    </div>
+                    <p>Free financial calculators and expert advice to help you make smarter money decisions. No signup required.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Blog Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=investment">Investments</a></li>
+                        <li><a href="blog.html?category=loan">Loans</a></li>
+                        <li><a href="blog.html?category=tax">Tax Planning</a></li>
+                        <li><a href="blog.html?category=retirement">Retirement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 FinanceTools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Blog Category Filtering
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const category = this.getAttribute('data-category');
+            const posts = document.querySelectorAll('.post-card');
+            const featured = document.querySelector('.featured-post');
+            
+            // Hide featured post if not "all"
+            if (category !== 'all') {
+                featured.style.display = 'none';
+            } else {
+                featured.style.display = 'grid';
+            }
+            
+            // Filter blog posts
+            posts.forEach(post => {
+                if (category === 'all' || post.getAttribute('data-category') === category) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Search functionality
+    document.querySelector('.search-box button').addEventListener('click', function() {
+        const searchTerm = document.querySelector('.search-box input').value.toLowerCase();
+        const posts = document.querySelectorAll('.post-card');
+        const featured = document.querySelector('.featured-post');
+        
+        if (searchTerm.trim() === '') return;
+        
+        featured.style.display = 'none';
+        
+        posts.forEach(post => {
+            const title = post.querySelector('h3').textContent.toLowerCase();
+            const excerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+        
+        // Reset category buttons
+        document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector('.category-btn[data-category="all"]').classList.add('active');
+    });
+    
+    // Enter key for search
+    document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            document.querySelector('.search-box button').click();
+        }
+    });
+    </script>
+    <!-- SEO & Analytics Scripts -->
+<script>
+  // Your analytics IDs here
+  const GA_ID = 'G-XXXXXXXXXX';
+  const GTM_ID = 'GTM-XXXXXX';
+  const CLARITY_ID = 'your-project-id';
+  const HOTJAR_ID = 1000000; // Your Hotjar ID
+</script>
+
+<!-- Performance Monitoring -->
+<script src="/js/seo-performance.js"></script>
+
+<!-- Event Tracking -->
+<script src="/js/seo-tracking.js"></script>
+
+<!-- Schema Markup -->
+<script src="/js/seo-schema.js"></script>
+
+<!-- Calculator Integration -->
+<script src="/js/seo-calculator.js"></script>
+
+<!-- Breadcrumb Generator -->
+<script src="/js/seo-breadcrumbs.js"></script>
+
+<!-- Initialize all scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // All scripts will auto-initialize
+    console.log('FinanceTools SEO Suite Loaded');
+  });
+</script>
+</body>
+</html>

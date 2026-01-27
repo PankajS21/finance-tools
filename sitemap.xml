@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+    <!-- Home Page -->
+    <url>
+        <loc>https://financetools.com/</loc>
+        <lastmod>2024-01-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://financetools.com/og-image.png</image:loc>
+            <image:title>FinanceTools - Free Financial Calculators</image:title>
+            <image:caption>15+ free financial calculators for loans, investments, taxes, retirement</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Calculators -->
+    <url>
+        <loc>https://financetools.com/#emi-calculator</loc>
+        <lastmod>2024-01-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://financetools.com/images/emi-calculator.png</image:loc>
+        </image:image>
+    </url>
+    
+    <!-- Static Pages -->
+    <url>
+        <loc>https://financetools.com/about.html</loc>
+        <lastmod>2024-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Blog Posts -->
+    <url>
+        <loc>https://financetools.com/blog/home-loan-saving-tips.html</loc>
+        <lastmod>2024-01-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <news:news>
+            <news:publication>
+                <news:name>FinanceTools Blog</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2024-01-25</news:publication_date>
+            <news:title>How to Save ₹5 Lakhs on Your Home Loan EMI</news:title>
+            <news:keywords>home loan, emi calculator, save money, loan tips</news:keywords>
+        </news:news>
+    </url>
+    
+</urlset>
