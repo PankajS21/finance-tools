@@ -25,8 +25,8 @@
             const loadTime = timing.loadEventEnd - timing.navigationStart;
             const domReadyTime = timing.domContentLoadedEventEnd - timing.navigationStart;
             
-            console.log('[Performance] Page loaded in', loadTime, 'ms');
-            console.log('[Performance] DOM ready in', domReadyTime, 'ms');
+            // console.log('[Performance] Page loaded in', loadTime, 'ms');
+            // console.log('[Performance] DOM ready in', domReadyTime, 'ms');
             
             // Send to analytics if available
             if (window.gtag && loadTime > 0) {

@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.calculatorSEO = new CalculatorSEO();
     
     // Expose for debugging
-    console.log('Calculator SEO tracking initialized');
+    // console.log('Calculator SEO tracking initialized');
     
     // Send page view event for calculators
     if (window.location.hash.includes('calculator')) {

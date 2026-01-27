@@ -79,7 +79,7 @@ function generateBreadcrumbs() {
         createVisibleBreadcrumbs(breadcrumbs);
         
     } catch (error) {
-        console.error('Error generating breadcrumbs:', error);
+        // console.error('Error generating breadcrumbs:', error);
     }
 }
 
