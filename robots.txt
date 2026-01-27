@@ -1,82 +1,399 @@
-# Enhanced robots.txt
+# ============================================
+# AllFinancialTools.com - robots.txt
+# Last Updated: 2024-01-27
+# ============================================
+
+# ===== GLOBAL DIRECTIVES =====
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /cgi-bin/
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /search/
-Disallow: /?s=
-Crawl-delay: 2
+Crawl-delay: 1
+Request-rate: 1/1
+Visit-time: 0000-2359
 
-# Sitemaps
-Sitemap: https://financetools.com/sitemap.xml
-Sitemap: https://financetools.com/sitemap-news.xml
-Sitemap: https://financetools.com/sitemap-video.xml
+# ===== SITEMAPS =====
+Sitemap: https://www.allfinancialtools.com/sitemap.xml
+Sitemap: https://www.allfinancialtools.com/sitemap-news.xml
+Sitemap: https://www.allfinancialtools.com/sitemap-images.xml
+Sitemap: https://www.allfinancialtools.com/sitemap-videos.xml
 
-# Search Engines
+# ===== SEARCH ENGINE SPECIFIC RULES =====
+
+# Google Bots
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
+Disallow: /private/
 Crawl-delay: 1
+Request-rate: 10/1m
 
 User-agent: Googlebot-Image
 Allow: /
 Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
 
 User-agent: Googlebot-Video
 Allow: /
 Disallow: /admin/
+Disallow: /private/
 
+User-agent: Googlebot-News
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Googlebot-Mobile
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Bing Bots
 User-agent: Bingbot
 Allow: /
 Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+Request-rate: 5/1m
+
+User-agent: MSNBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
 Crawl-delay: 1
 
+# Yandex
 User-agent: Yandex
 Allow: /
 Disallow: /admin/
+Disallow: /private/
 Crawl-delay: 2
+Clean-param: ref /calculator/
+Clean-param: sessionid /calculator/
+Clean-param: source /
+Clean-param: utm_* /
 
+# DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
 Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
 
+# Apple
+User-agent: Applebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+
+# Facebook
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+
+# ===== RESTRICTED BOTS =====
+
+# Baidu (block if not targeting China)
 User-agent: Baiduspider
 Disallow: /
+Crawl-delay: 10
 
+# MJ12 (aggressive crawler)
 User-agent: MJ12bot
+Disallow: /
+Crawl-delay: 10
+
+# Ahrefs (SEO tool)
+User-agent: AhrefsBot
+Disallow: /
+Crawl-delay: 10
+
+# Semrush (SEO tool)
+User-agent: SemrushBot
+Disallow: /
+Crawl-delay: 10
+
+# Screaming Frog (SEO tool)
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+Crawl-delay: 10
+
+# Other SEO Crawlers
+User-agent: dotbot
+Disallow: /
 Crawl-delay: 5
 
-# Directories
+User-agent: Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +http://megaindex.com/crawler)
+Disallow: /
+Crawl-delay: 10
+
+User-agent: rogerbot
+Disallow: /
+Crawl-delay: 10
+
+# ===== DIRECTORY RESTRICTIONS =====
+
+# Admin & Private Directories
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /private/
+Disallow: /secret/
+Disallow: /confidential/
+Disallow: /internal/
+
+# System Directories
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-json/
+Disallow: /xmlrpc.php
+
+# Development & Temporary Directories
 Disallow: /cache/
 Disallow: /includes/
 Disallow: /temp/
 Disallow: /tmp/
 Disallow: /logs/
+Disallow: /backup/
+Disallow: /backups/
+Disallow: /old/
+Disallow: /test/
+Disallow: /testing/
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /development/
 
-# Files
+# User Content (if applicable)
+Disallow: /uploads/
+Disallow: /media/
+Disallow: /assets/private/
+
+# ===== FILE TYPE RESTRICTIONS =====
+
+# Script Files
 Disallow: /*.php$
 Disallow: /*.inc$
 Disallow: /*.sql$
+Disallow: /*.py$
+Disallow: /*.js$
+Disallow: /*.cgi$
+
+# Archive Files
 Disallow: /*.gz$
 Disallow: /*.zip$
 Disallow: /*.tar$
-Disallow: /*.exe$
+Disallow: /*.rar$
+Disallow: /*.7z$
 
-# Parameters
-Disallow: /*?*
-Disallow: /*&*
-Disallow: /*=*
+# Executable Files
+Disallow: /*.exe$
+Disallow: /*.dll$
+Disallow: /*.msi$
+Disallow: /*.bat$
+Disallow: /*.sh$
+
+# Document Files (if you want to block indexing)
 Disallow: /*.pdf$
 Disallow: /*.doc$
+Disallow: /*.docx$
 Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
 
-# Host
-Host: https://financetools.com
+# Configuration Files
+Disallow: /*.ini$
+Disallow: /*.config$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+Disallow: /*.json$
+Disallow: /*.xml$  # Except sitemap.xml
 
-# Clean param (for dynamic URLs)
+# ===== PARAMETER RESTRICTIONS =====
+
+# Search & Filter Parameters
+Disallow: /search/
+Disallow: /*?s=
+Disallow: /*?search=
+Disallow: /*?q=
+Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /*?order=
+Disallow: /*?page=
+Disallow: /*?p=
+
+# Session & Tracking Parameters
+Disallow: /*?sessionid=
+Disallow: /*?sid=
+Disallow: /*?token=
+Disallow: /*?auth=
+Disallow: /*?login=
+
+# Analytics & Marketing Parameters
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?utm_term=
+Disallow: /*?utm_content=
+Disallow: /*?ref=
+Disallow: /*?source=
+Disallow: /*?campaign=
+Disallow: /*?affiliate=
+
+# Calculator Specific Parameters
+Disallow: /*?amount=
+Disallow: /*?rate=
+Disallow: /*?years=
+Disallow: /*?result=
+Disallow: /*?calculate=
+
+# Dynamic URLs with multiple parameters
+Disallow: /*?*&*
+Disallow: /*?*=%  # URLs with encoded parameters
+
+# ===== SPECIFIC PAGE RESTRICTIONS =====
+
+# Login & Account Pages (if applicable)
+Disallow: /login/
+Disallow: /signin/
+Disallow: /register/
+Disallow: /signup/
+Disallow: /account/
+Disallow: /profile/
+Disallow: /dashboard/
+
+# Checkout & Cart (if e-commerce)
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /payment/
+Disallow: /billing/
+
+# API Endpoints
+Disallow: /api/
+Disallow: /graphql/
+Disallow: /rest/
+Disallow: /v1/
+Disallow: /v2/
+
+# ===== ALLOW SPECIFIC IMPORTANT PAGES =====
+
+# Explicitly allow calculator pages (in case of over-restriction)
+Allow: /emi-calculator
+Allow: /sip-calculator
+Allow: /tax-calculator
+Allow: /retirement-calculator
+Allow: /ppf-calculator
+Allow: /fd-calculator
+Allow: /loan-calculator
+Allow: /investment-calculator
+Allow: /home-loan-calculator
+Allow: /personal-loan-calculator
+Allow: /car-loan-calculator
+Allow: /education-loan-calculator
+Allow: /gst-calculator
+Allow: /gratuity-calculator
+Allow: /nps-calculator
+Allow: /rd-calculator
+Allow: /lumpsum-calculator
+Allow: /compound-interest-calculator
+Allow: /simple-interest-calculator
+Allow: /home-affordability-calculator
+
+# Allow static pages
+Allow: /about.html
+Allow: /contact.html
+Allow: /blog.html
+Allow: /privacy-policy.html
+Allow: /terms-of-service.html
+Allow: /disclaimer.html
+Allow: /cookie-policy.html
+Allow: /sitemap.html
+
+# Allow blog posts
+Allow: /blog/home-loan-saving-tips.html
+Allow: /blog/sip-investment-complete-guide.html
+Allow: /blog/tax-saving-strategies-2024.html
+Allow: /blog/retirement-planning-complete-guide.html
+
+# Allow blog categories
+Allow: /blog/category/investment
+Allow: /blog/category/tax
+Allow: /blog/category/retirement
+Allow: /blog/category/loans
+Allow: /blog/category/personal-finance
+
+# ===== HOST DIRECTIVE (Yandex specific) =====
+# Note: Host directive is Yandex-specific, not used by Google/Bing
+Host: https://www.allfinancialtools.com
+
+# ===== CLEAN PARAM DIRECTIVES (Yandex specific) =====
+# Yandex-specific: ignore these parameters for indexing
 Clean-param: ref /calculator/
 Clean-param: sessionid /calculator/
 Clean-param: source /
+Clean-param: utm_source /
+Clean-param: utm_medium /
+Clean-param: utm_campaign /
+Clean-param: utm_term /
+Clean-param: utm_content /
+Clean-param: fbclid /
+Clean-param: gclid /
+Clean-param: msclkid /
+
+# ===== CRAWL HINTS =====
+# These are suggestions for crawlers (not all support)
+
+# Preferred currency (if applicable)
+# Currency: USD
+
+# Preferred language
+# Language: en
+
+# Geographical target
+# Geo: global
+
+# ===== COMMENTED OUT - FOR FUTURE USE =====
+# Uncomment these lines when you add these features:
+
+# When you have user accounts:
+# Disallow: /user/
+# Disallow: /members/
+# Disallow: /my-account/
+
+# When you have a forum:
+# Disallow: /forum/search/
+# Disallow: /forum/admin/
+# Disallow: /forum/moderator/
+
+# When you have an online store:
+# Disallow: /checkout/
+# Disallow: /cart/
+# Disallow: /add-to-cart/
+# Disallow: /wishlist/
+
+# When you have a membership site:
+# Disallow: /members-only/
+# Disallow: /premium-content/
+# Disallow: /subscription/
+
+# ============================================
+# END OF robots.txt
+# ============================================
