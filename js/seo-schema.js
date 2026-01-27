@@ -63,6 +63,17 @@ function generateDynamicFAQSchema() {
     if (faqItems.length > 0) {
         const faqSchema = {
             "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Loan Calculator",
+  "description": "Compare and calculate all types of loans",
+  "url": "https://www.allfinancialtools.com/loan-calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
             "@type": "FAQPage",
             "mainEntity": []
         };
@@ -110,6 +121,17 @@ function generateDynamicFAQSchema() {
 function generateCalculatorSchema(calculatorId, calculatorName, inputs, results) {
     const calculatorSchema = {
         "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Loan Calculator",
+  "description": "Compare and calculate all types of loans",
+  "url": "https://www.allfinancialtools.com/loan-calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
         "@type": "WebApplication",
         "name": calculatorName + " - FinanceTools",
         "url": window.location.href + '#' + calculatorId,
