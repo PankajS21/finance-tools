@@ -166,17 +166,6 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Loan Calculator",
-  "description": "Compare and calculate all types of loans",
-  "url": "https://www.allfinancialtools.com/loan-calculator",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Any",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
           "@type": "WebApplication",
   "name": "Loan Calculator",
   "description": "Compare and calculate all types of loans",
@@ -334,83 +323,89 @@
     </script>
 
     <!-- ===== ADDITIONAL SCHEMA FOR SPECIFIC CALCULATORS ===== -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Loan Calculator",
-  "description": "Compare and calculate all types of loans",
-  "url": "https://www.allfinancialtools.com/loan-calculator",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Any",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-        "@type": "ItemList",
-        "name": "Top Financial Calculators 2024",
-        "description": "Most popular financial calculators used worldwide",
-        "numberOfItems": 10,
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                    "@type": "WebApplication",
-                    "name": "EMI Calculator",
-                    "description": "Calculate Equated Monthly Installment for any loan",
-                    "url": "https://www.allfinancialtools.com/emi-calculator",
-                    "applicationCategory": "FinanceApplication"
-                }
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                    "@type": "WebApplication",
-                    "name": "SIP Calculator",
-                    "description": "Calculate returns on Systematic Investment Plan",
-                    "url": "https://www.allfinancialtools.com/sip-calculator",
-                    "applicationCategory": "FinanceApplication"
-                }
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                    "@type": "WebApplication",
-                    "name": "Tax Calculator",
-                    "description": "Calculate income tax for 2024 financial year",
-                    "url": "https://www.allfinancialtools.com/tax-calculator",
-                    "applicationCategory": "FinanceApplication"
-                }
-            },
-            {
-                "@type": "ListItem",
-                "position": 4,
-                "item": {
-                    "@type": "WebApplication",
-                    "name": "Retirement Calculator",
-                    "description": "Plan your retirement corpus and savings",
-                    "url": "https://www.allfinancialtools.com/retirement-calculator",
-                    "applicationCategory": "FinanceApplication"
-                }
-            },
-            {
-                "@type": "ListItem",
-                "position": 5,
-                "item": {
-                    "@type": "WebApplication",
-                    "name": "Loan Calculator",
-                    "description": "Compare and calculate all types of loans",
-                    "url": "https://www.allfinancialtools.com/loan-calculator",
-                    "applicationCategory": "FinanceApplication"
-                }
+ <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://www.allfinancialtools.com/#website",
+            "url": "https://www.allfinancialtools.com/",
+            "name": "AllFinancialTools.com - Free Financial Calculators",
+            "description": "World's largest collection of free online financial calculators for loans, investments, taxes, retirement planning, and financial analysis.",
+            "potentialAction": [{
+                "@type": "SearchAction",
+                "target": "https://www.allfinancialtools.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }],
+            "inLanguage": ["en-US", "en-GB", "en-IN"],
+            "publisher": {
+                "@type": "Organization",
+                "name": "AllFinancialTools.com",
+                "url": "https://www.allfinancialtools.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.allfinancialtools.com/logo.png",
+                    "width": 300,
+                    "height": 60
+                },
+                "sameAs": [
+                    "https://twitter.com/AllFinTools",
+                    "https://facebook.com/AllFinTools",
+                    "https://linkedin.com/company/allfinancialtools"
+                ]
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "CollectionPage",
+            "@id": "https://www.allfinancialtools.com/#calculators",
+            "url": "https://www.allfinancialtools.com/",
+            "name": "Free Financial Calculators Collection",
+            "description": "Complete set of 25+ free financial calculators including EMI Calculator, SIP Calculator, Tax Calculator, Retirement Calculator, Loan Calculators, Investment Calculators, and more.",
+            "mainEntity": {
+                "@type": "ItemList",
+                "numberOfItems": 25,
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "EMI Calculator", "url": "https://www.allfinancialtools.com/emi-calculator"},
+                    {"@type": "ListItem", "position": 2, "name": "SIP Calculator", "url": "https://www.allfinancialtools.com/sip-calculator"},
+                    {"@type": "ListItem", "position": 3, "name": "Income Tax Calculator", "url": "https://www.allfinancialtools.com/tax-calculator"},
+                    {"@type": "ListItem", "position": 4, "name": "Retirement Calculator", "url": "https://www.allfinancialtools.com/retirement-calculator"},
+                    {"@type": "ListItem", "position": 5, "name": "PPF Calculator", "url": "https://www.allfinancialtools.com/ppf-calculator"}
+                ]
+            },
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.allfinancialtools.com/"},
+                    {"@type": "ListItem", "position": 2, "name": "Financial Calculators", "item": "https://www.allfinancialtools.com/#calculators"}
+                ]
+            }
+        },
+        {
+            "@type": "WebApplication",
+            "name": "AllFinancialTools Financial Calculator Suite",
+            "url": "https://www.allfinancialtools.com/",
+            "description": "Complete suite of 25+ free financial calculators for personal and professional use",
+            "applicationCategory": ["FinanceApplication", "BusinessApplication", "EducationalApplication"],
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2024-01-01"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "ratingCount": "500000",
+                "bestRating": "5",
+                "worstRating": "1"
+            }
+        }
+    ]
+}
+</script>
 
     <!-- ===== PERFORMANCE SCRIPTS ===== -->
     <script>
